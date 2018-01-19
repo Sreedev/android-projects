@@ -1,5 +1,10 @@
 package com.testapp.pepoauth.rxjwithmvvpsample;
 
+import com.testapp.pepoauth.rxjwithmvvpsample.DaggerHandler.ComponentClass;
+import com.testapp.pepoauth.rxjwithmvvpsample.DaggerHandler.DaggerComponentClass;
+import com.testapp.pepoauth.rxjwithmvvpsample.DaggerHandler.ModuleClass;
+import com.testapp.pepoauth.rxjwithmvvpsample.DataHandler.MainModel;
+
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -9,11 +14,14 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public class MainViewModel implements MainContract.Presenter {
-    private MainModel model;
 
+    MainModel model;
+    ComponentClass component;
 
     public MainViewModel() {
-        model = MainModel.getInstance();
+        component = DaggerComponentClass.builder().moduleClass(new ModuleClass()).build();
+
+        model=component.provideMainModel();
     }
 
 
