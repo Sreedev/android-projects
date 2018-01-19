@@ -4,7 +4,7 @@ import io.reactivex.Observer;
 
 /**
  * This is the contracts class that interacts between View and ViewModel(ViewModel)
- *
+ * <p>
  * Created by Sreedev on 18/01/18.
  */
 

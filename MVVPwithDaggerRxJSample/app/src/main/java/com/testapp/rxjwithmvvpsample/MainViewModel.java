@@ -11,7 +11,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * This is the ViewModel or the presenter. I am naming as ViewModel as we are trying to implement MVVP here.
- *
+ * <p>
  * Created by Sreedev on 18/01/18.
  */
 

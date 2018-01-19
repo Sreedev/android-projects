@@ -4,7 +4,7 @@ import io.reactivex.Observable;
 
 /**
  * Created by Sreedev on 18/01/18.
- *
+ * <p>
  * This is the main model class
  */
 

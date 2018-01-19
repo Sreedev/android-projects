@@ -9,7 +9,7 @@ import dagger.Provides;
 
 /**
  * Created by Sreedev on 19/01/18.
- *
+ * <p>
  * This is a class created for Dagger to work. This will be the module class that provides all the dependencies.
  */
 
