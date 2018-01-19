@@ -1,18 +1,29 @@
 package com.sdev.sampledevdagger2;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * This Activity acts as the view in MVP and it implements View from the contract
+ */
+public class MainActivity extends Activity implements MainContract.View {
+    MainPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(this,"Win Win",Toast.LENGTH_LONG).show();
+        //presenter is initialized
+        presenter = new MainPresenter(this);
 
-        Toast.makeText(this,"Loose Loose",Toast.LENGTH_LONG).show();
+        //Calling the method in presenter
+        presenter.addNumbers(1, 2);
+
+    }
+
+    @Override
+    public void result(int result) {
+        System.out.println("Result = " + result);
     }
 }
