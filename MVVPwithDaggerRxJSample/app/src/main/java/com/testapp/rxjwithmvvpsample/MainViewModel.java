@@ -1,9 +1,9 @@
-package com.testapp.pepoauth.rxjwithmvvpsample;
+package com.testapp.rxjwithmvvpsample;
 
-import com.testapp.pepoauth.rxjwithmvvpsample.DaggerHandler.ComponentClass;
-import com.testapp.pepoauth.rxjwithmvvpsample.DaggerHandler.DaggerComponentClass;
-import com.testapp.pepoauth.rxjwithmvvpsample.DaggerHandler.ModuleClass;
-import com.testapp.pepoauth.rxjwithmvvpsample.DataHandler.MainModel;
+import com.testapp.rxjwithmvvpsample.DaggerHandler.ComponentClass;
+import com.testapp.rxjwithmvvpsample.DaggerHandler.DaggerComponentClass;
+import com.testapp.rxjwithmvvpsample.DaggerHandler.ModuleClass;
+import com.testapp.rxjwithmvvpsample.DataHandler.MainModel;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;

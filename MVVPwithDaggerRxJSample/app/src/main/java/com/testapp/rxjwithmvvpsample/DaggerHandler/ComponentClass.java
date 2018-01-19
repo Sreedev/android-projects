@@ -1,6 +1,7 @@
-package com.testapp.pepoauth.rxjwithmvvpsample.DaggerHandler;
+package com.testapp.rxjwithmvvpsample.DaggerHandler;
 
-import com.testapp.pepoauth.rxjwithmvvpsample.DataHandler.MainModel;
+import com.testapp.rxjwithmvvpsample.DaggerHandler.ModuleClass;
+import com.testapp.rxjwithmvvpsample.DataHandler.MainModel;
 
 import javax.inject.Singleton;
 

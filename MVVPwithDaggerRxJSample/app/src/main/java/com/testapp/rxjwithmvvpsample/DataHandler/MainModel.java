@@ -1,4 +1,4 @@
-package com.testapp.pepoauth.rxjwithmvvpsample.DataHandler;
+package com.testapp.rxjwithmvvpsample.DataHandler;
 
 import io.reactivex.Observable;
 

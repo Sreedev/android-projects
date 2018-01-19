@@ -1,12 +1,10 @@
-package com.testapp.pepoauth.rxjwithmvvpsample;
+package com.testapp.rxjwithmvvpsample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.testapp.pepoauth.rxjavatry.R;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;

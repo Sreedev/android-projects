@@ -1,4 +1,4 @@
-package com.testapp.pepoauth.rxjwithmvvpsample;
+package com.testapp.rxjwithmvvpsample;
 
 import io.reactivex.Observer;
 
