@@ -9,9 +9,13 @@ import android.widget.TextView;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
+/**
+ * Activity that implements View from the Contract class
+ */
+
 public class MainActivity extends AppCompatActivity implements MainContract.View {
 
-    MainViewModel mainPresenter;
+    MainViewModel mainViewModel;
 
     Button bFetchFromJust;
     TextView tvResult;
@@ -24,11 +28,15 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         bFetchFromJust = findViewById(R.id.button_fetch_just);
         tvResult = findViewById(R.id.tv_result);
 
-        mainPresenter = new MainViewModel();
+        mainViewModel = new MainViewModel();
 
         bFetchFromJust.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //Creating an observer which will observe on the observable for the responses
+                //this observer will be passed to ViewModel for further processing
+                //Customize for your requirement
                 Observer<String> observer = new Observer<String>() {
                     String s = "";
 
@@ -52,7 +60,9 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
                         System.out.println("onComplete");
                     }
                 };
-                mainPresenter.onClick(observer);
+
+                //Passing observer to the ViewModel
+                mainViewModel.onClick(observer);
             }
         });
 
