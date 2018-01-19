@@ -17,14 +17,14 @@ MainPresenter - Is the presenter
 
 -DaggerHelper
     - MainDaggerModule  - Module class which hods all the objects to provide dependencies
-    - MyDaggerComponent - This is an interface class which helps to communicate between DaggerHelper classes and
-                          our dependent classes
+    - MyDaggerComponent - This is an interface class which helps to communicate between DaggerHelper classes and 
+    our dependent classes
 
 -DataHelper
     - Utils - Is a model class where the business logic is implemented
 
 
-    Feel free to contribute or reach out to me for any queries.
+Feel free to contribute or reach out to me for any queries.
 
 Sreedev
 sreedev.r5@gmail.com
