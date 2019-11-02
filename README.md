@@ -12,7 +12,7 @@ This is a repo which intent to keep maximum sample Android projects done in both
 3. [recyclerviewwithkotlin](https://github.com/Sreedev/androidappsamples/tree/master/recyclerviewwithkotlin)
 
 
-## Pull requests doc.
+## Pull requests.
 > 1. Clone the project.
 > 1. Make a feature or bugfix from develop branch and do all the changes in your branch.
 > 1. Pull requests should be raised against develop branch.
@@ -22,8 +22,9 @@ This is a repo which intent to keep maximum sample Android projects done in both
 > 5. Make sure your branch is ahead before merging it develop branch, even after approvals.
 
 ## Created & Maintained By
-[Sreedev](https://twitter.com/Sreedevr5) ([www.thelifeimprovised.com](http://www.thelifeimprovised.com/))
-sreedev.r5@gmail.com
+[Sreedev](http://www.thelifeimprovised.com/)<br />
+[![Twitter Follow](https://img.shields.io/twitter/follow/sreedevr5?label=sreedev&style=social)](https://twitter.com/Sreedevr5)<br />
+Feel free to DM me in twitter for any queries.
 
 License
 =======
