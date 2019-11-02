@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
                 //Creating an observer which will observe on the observable for the responses
                 //this observer will be passed to ViewModel for further processing
-                //Customize for your requirement
                 Observer<String> observer = new Observer<String>() {
                     String s = "";
 

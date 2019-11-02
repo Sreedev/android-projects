@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">recyclerviewwithkotlin</string>
+    <string name="actionbartitle">Today\'s world News</string>
+    <string name="news_one_title">EU nearly on track for 2030 emission cuts</string>
+    <string name="news_one_shortdesc">It noted that the EU is currently on track to deliver a 30 per cent reduction by 2030 and that the bloc cut its emissions by two per cent between 2017 and 2018.</string>
+    <string name="news_two_title">Hong Kong police fire tear gas to break up Halloween party protests</string>
+    <string name="news_two_shortdesc">Protesters have for five months taken to the streets of the Chinese-ruled city in a sometimes violent response to perceived Chinese meddling with its promised freedoms.</string>
+    <string name="news_three_title">Hong Kong bourse\'s head calls himself great believer in \'one country, two systems</string>
+    <string name="news_three_shortdesc">In a rare public criticism of Hong Kong\'s unique one country, two systems, Li said in a London speech this week that there were some fundamental flaws at the very beginning of the implementation</string>
+    <string name="news_four_title">Hong Kong in recession as protests slam retailers, tourism</string>
+    <string name="news_four_shortdesc">On Thursday, the government said Hong Kong\'s economy shrank 3.2% in July-September from the previous quarter, pushing the city into a technical recession.</string>
+    <string name="news_five_title">Thai king creates boot camp-style \'unity\' courses</string>
+    <string name="news_five_shortdesc">The programme, established last year, highlights the way in which King Maha Vajiralongkorn, 67, is asserting his will on Thai government and society to a greater extent than any sovereign since the end of absolute monarchy in 1932, some experts say.</string>
+    <string name="news_six_title">Dying winds bring relief after weeks of California wildfires</string>
+    <string name="news_six_shortdesc">The blaze was the largest to burn over a three-week siege of vicious gusts that fanned fast-moving wildfires across California and led utility companies to cut power to millions to prevent winds from blowing branches into electric lines and igniting an inferno.</string>
+    <string name="news_seven_title">Chicago: 7-year-old girl trick-or-treating on Halloween critically injured in shooting</string>
+    <string name="news_seven_shortdesc">The shooting occurred early Halloween evening as the girl was walking with her family and other trick-or-treaters along a street in the Little Village neighborhood.</string>
+</resources>

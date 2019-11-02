@@ -18,7 +18,7 @@ This project is done in MVP architecture
 > DaggerHelper
     > MainDaggerModule  - Module class which hods all the objects to provide dependencies
     > MyDaggerComponent - This is an interface class which helps to communicate between DaggerHelper classes and 
-    our dependent classes
+                          our dependent classes
 
 >DataHelper
     > Utils - Is a model class where the business logic is implemented
