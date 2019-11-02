@@ -1,15 +1,18 @@
 ![Android cover](https://coverfiles.alphacoders.com/420/42029.jpg)
-# Sample projects for quick references
 
-## Feel free to contribute and support. Lets grow together. 💚
+This is a repo which intent to keep maximum sample Android projects done in both Java and Kotlin for learning porpose and for quick reference. This is an open source project and anyone is free and more than welcome to contribute. Happy coding :)
+
+# "All in one" for Android sample projects
+
+### Star this repo, contribute and make this a happy place :). Lets grow together. 💚
 
 ## Samples
 1. [Dagger2](https://github.com/Sreedev/SampleApplications/tree/master/Dagger2Sample)
 2. [MVVP with Dagger and Rxjava](https://github.com/Sreedev/SampleApplications/tree/master/MVVPwithDaggerRxJSample)
+3. [recyclerviewwithkotlin](https://github.com/Sreedev/androidappsamples/tree/master/recyclerviewwithkotlin)
 
 
-
-### Created & Maintained By
+## Created & Maintained By
 [Sreedev](https://twitter.com/Sreedevr5) ([www.thelifeimprovised.com](http://www.thelifeimprovised.com/))
 
 License
