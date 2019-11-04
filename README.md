@@ -2,7 +2,7 @@
 
 This is a repo which intent to keep maximum sample Android projects done in both Java and Kotlin for learning porpose and for quick reference. This is an open source project and anyone is free and more than welcome to contribute. Happy coding :)
 
-# "All in one" for Android sample projects
+# "All in one place" - Android sample projects
 
 ### Star this repo, contribute and make this a happy place :). Lets grow together. 💚
 
