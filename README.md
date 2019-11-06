@@ -11,6 +11,14 @@ This is a repo which intent to keep maximum sample Android projects done in both
 2. [MVVP with Dagger and Rxjava](https://github.com/Sreedev/SampleApplications/tree/master/MVVPwithDaggerRxJSample)
 3. [recyclerviewwithkotlin](https://github.com/Sreedev/androidappsamples/tree/master/recyclerviewwithkotlin)
 
+## Setup.
+> 1. Create a new folder.
+> 2. Copy and paste the dependencies.gradle from the rool project folder in repo in the new folder.
+> 3. Copy you project and paste it in that folder.
+> 4. Make sure your project app/gradle and root/gradle looks like one in the projects in the repository.
+> 5. Build your project.
+> 6. Make sure you maintain the correct versions like all other projects in he repo.
+
 
 ## Pull requests.
 > 1. Clone the project.
