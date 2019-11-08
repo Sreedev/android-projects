@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FBListFragment">
+
+    <fragment
+        android:id="@+id/emailAuthFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.EmailAuthFragment"
+        android:label="fragment_email_auth"
+        tools:layout="@layout/fragment_email_auth" />
+    <fragment
+        android:id="@+id/FBListFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.HomeListFragment"
+        android:label="fragment_fblist"
+        tools:layout="@layout/fragment_fblist"
+        app:startDestination="@id/action_FBListFragment_to_emailAuthFragment">
+        <action
+            android:id="@+id/action_FBListFragment_to_emailAuthFragment"
+            app:destination="@id/emailAuthFragment" />
+        <action
+            android:id="@+id/action_FBListFragment_to_phoneNumberValidationFragment"
+            app:destination="@id/phoneNumberValidationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneNumberValidationFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.PhoneNumberValidationFragment"
+        android:label="fragment_phone_number_validation"
+        tools:layout="@layout/fragment_phone_number_validation" />
+</navigation>

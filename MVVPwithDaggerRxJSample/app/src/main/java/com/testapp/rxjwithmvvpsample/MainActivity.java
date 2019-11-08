@@ -1,7 +1,7 @@
 package com.testapp.rxjwithmvvpsample;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,7 +13,7 @@ import io.reactivex.disposables.Disposable;
  * Activity that implements View from the Contract class
  */
 
-public class MainActivity extends AppCompatActivity implements MainContract.View {
+public class MainActivity extends Activity implements MainContract.View {
 
     MainViewModel mainViewModel;
 

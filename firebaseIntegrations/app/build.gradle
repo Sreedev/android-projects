@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion compileSDKVer
+    buildToolsVersion buildToolsVer
+    defaultConfig {
+        applicationId "com.sample.slothyhacker.firebaseintegrations"
+        minSdkVersion 14
+        targetSdkVersion compileSDKVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "androidx.appcompat:appcompat:$appCompact"
+    implementation "androidx.core:core-ktx:$coreKtx"
+    implementation "androidx.constraintlayout:constraintlayout:$contraintLayout"
+    implementation "com.google.android.material:material:$materialver"
+
+    // Kotlin navigation component
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //FireBase
+    implementation "androidx.legacy:legacy-support-v4:$xlegacysupport"
+    implementation "com.google.firebase:firebase-auth:$firebaseAuth"
+
+    //FireBase DB
+    implementation "com.google.firebase:firebase-database:$firebaseDatabase"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}
