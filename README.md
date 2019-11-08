@@ -23,12 +23,12 @@ This is a repo which intent to keep maximum sample Android projects done in both
 
 ## Pull requests.
 > 1. Clone the project.
-> 1. Make a feature or bugfix from develop branch and do all the changes in your branch.
-> 1. Pull requests should be raised against develop branch.
+> 1. Make your branch from develop and changes should made in that feature or bugfix. 
+> 1. Pull requests should only be raised against develop branch.
 > 2. Approval from one of the owners is mandatory to merge it to develop.
-> 3. [feature or bugfix]/[name of change] should be the format of PR title.
+> 3. [feature or bugfix]/[name of change] should be PR title format.
 > 4. Adding a short desc in the PR will be really helpful.
-> 5. Make sure your branch is ahead before merging it develop branch, even after approvals.
+> 5. Make sure your branch is ahead of develop branch before merging it.
 
 ## Created & Maintained By
 [Sreedev](http://www.thelifeimprovised.com/)<br />
