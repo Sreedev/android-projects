@@ -7,9 +7,10 @@ This is a repo which intent to keep maximum sample Android projects done in both
 ### Star this repo, contribute and make this a happy place :). Lets grow together. 💚
 
 ## Samples
-1. [Dagger2](https://github.com/Sreedev/SampleApplications/tree/master/Dagger2Sample)
-2. [MVVP with Dagger and Rxjava](https://github.com/Sreedev/SampleApplications/tree/master/MVVPwithDaggerRxJSample)
-3. [recyclerviewwithkotlin](https://github.com/Sreedev/androidappsamples/tree/master/recyclerviewwithkotlin)
+1. [Dagger2](https://github.com/Sreedev/SampleApplications/tree/develop/Dagger2Sample)
+2. [MVVP with Dagger and Rxjava](https://github.com/Sreedev/SampleApplications/tree/develop/MVVPwithDaggerRxJSample)
+3. [recyclerviewwithkotlin](https://github.com/Sreedev/androidappsamples/tree/develop/recyclerviewwithkotlin)
+4. [FirebaseIntegrations](https://github.com/Sreedev/androidappsamples/tree/develop/firebaseIntegrations)
 
 ## Setup.
 > 1. Create a new folder.
