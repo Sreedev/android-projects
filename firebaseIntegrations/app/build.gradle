@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion compileSDKVer
@@ -34,5 +35,12 @@ dependencies {
     // Kotlin navigation component
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //FireBase
+    implementation "androidx.legacy:legacy-support-v4:$xlegacysupport"
+    implementation "com.google.firebase:firebase-auth:$firebaseAuth"
+
+    //FireBase DB
+    implementation "com.google.firebase:firebase-database:$firebaseDatabase"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }

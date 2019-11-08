@@ -28,7 +28,7 @@ class HomeListFragment : Fragment(), View.OnClickListener {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_emailAuthFragment)
             }
             R.id.tv_phone_auth -> {
-                Toast.makeText(activity,"Phone number", Toast.LENGTH_LONG).show()
+                v.findNavController().navigate(R.id.action_FBListFragment_to_phoneNumberValidationFragment)
             }
         }
     }

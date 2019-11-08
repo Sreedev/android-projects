@@ -19,5 +19,13 @@
         <action
             android:id="@+id/action_FBListFragment_to_emailAuthFragment"
             app:destination="@id/emailAuthFragment" />
+        <action
+            android:id="@+id/action_FBListFragment_to_phoneNumberValidationFragment"
+            app:destination="@id/phoneNumberValidationFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/phoneNumberValidationFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.PhoneNumberValidationFragment"
+        android:label="fragment_phone_number_validation"
+        tools:layout="@layout/fragment_phone_number_validation" />
 </navigation>
