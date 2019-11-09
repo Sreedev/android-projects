@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Setting up action bar
+        //Initializing and setting up action bar
         val actionBar = supportActionBar
         actionBar!!.title = getString(R.string.actionbartitle)
 
