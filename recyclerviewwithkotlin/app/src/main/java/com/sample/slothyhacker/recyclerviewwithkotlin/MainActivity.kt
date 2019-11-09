@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    data class Rainfall(val newsTitle: String, val shortDesc: String)
+    data class NewsList(val newsTitle: String, val shortDesc: String)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,46 +26,46 @@ class MainActivity : AppCompatActivity() {
         list_recycler_view.adapter = newsListAdapter
     }
 
-    private fun getTheNews(): ArrayList<Rainfall> {
-        val newsList = ArrayList<Rainfall>()
+    private fun getTheNews(): ArrayList<NewsList> {
+        val newsList = ArrayList<NewsList>()
         newsList.add(
-            Rainfall(
+            NewsList(
                 getString(R.string.news_one_title),
                 getString(R.string.news_one_shortdesc)
             )
         )
         newsList.add(
-            Rainfall(
+            NewsList(
                 getString(R.string.news_two_title),
                 getString(R.string.news_two_shortdesc)
             )
         )
         newsList.add(
-            Rainfall(
+            NewsList(
                 getString(R.string.news_three_title),
                 getString(R.string.news_three_shortdesc)
             )
         )
         newsList.add(
-            Rainfall(
+            NewsList(
                 getString(R.string.news_four_title),
                 getString(R.string.news_four_shortdesc)
             )
         )
         newsList.add(
-            Rainfall(
+            NewsList(
                 getString(R.string.news_five_title),
                 getString(R.string.news_five_shortdesc)
             )
         )
         newsList.add(
-            Rainfall(
+            NewsList(
                 getString(R.string.news_six_title),
                 getString(R.string.news_six_shortdesc)
             )
         )
         newsList.add(
-            Rainfall(
+            NewsList(
                 getString(R.string.news_seven_title),
                 getString(R.string.news_seven_shortdesc)
             )
