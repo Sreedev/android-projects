@@ -39,10 +39,13 @@ class PhoneNumberValidationFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_phone_number_validation, container, false)
     }
 
+    /**
+     * Update your phone number
+     */
     override fun onResume() {
         super.onResume()
         signin.setOnClickListener {
-            startPhoneNumberVerification("+91-9643897450")
+            startPhoneNumberVerification("+91-Phone number")
         }
     }
 
