@@ -1,11 +1,12 @@
 package com.sample.slothyhacker.firebaseintegrations
 
-import android.content.ContentValues.TAG
+
+import android.app.AlertDialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseException
@@ -14,9 +15,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import com.sample.slothyhacker.firebaseintegrations.R.*
 import kotlinx.android.synthetic.main.fragment_email_auth.main_container
 import kotlinx.android.synthetic.main.fragment_phone_number_validation.*
 import java.util.concurrent.TimeUnit
+
 
 class PhoneNumberValidationFragment : Fragment() {
 
@@ -35,8 +38,9 @@ class PhoneNumberValidationFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_phone_number_validation, container, false)
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(layout.fragment_phone_number_validation, container, false)
     }
 
     /**
@@ -45,7 +49,7 @@ class PhoneNumberValidationFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         signin.setOnClickListener {
-            startPhoneNumberVerification("+91-Phone number")
+            startPhoneNumberVerification("+91 PhoneNumber")
         }
     }
 
@@ -53,8 +57,7 @@ class PhoneNumberValidationFragment : Fragment() {
         callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
                 verificationInProgress = false
-                showSnackbar("STATE_VERIFY_SUCCESS")
-                signInWithPhoneAuthCredential(credential)
+                signIn(credential)
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
@@ -68,10 +71,39 @@ class PhoneNumberValidationFragment : Fragment() {
             }
 
             override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken) {
-                showSnackbar("onCodeSent:$verificationId")
                 storedVerificationId = verificationId
                 resendToken = token
-                showSnackbar("State code sent")
+                showAlert(verificationId)
+            }
+        }
+    }
+
+    private fun showAlert(verificationId: String) {
+        var alert = AlertDialog.Builder(activity, style.ThemeOverlay_MaterialComponents_Dialog_Alert)
+        val edittext = EditText(activity)
+        alert.setMessage("OTP")
+        alert.setTitle("Enter the otp sent to you")
+        alert.setView(edittext)
+        alert.setPositiveButton("Confirm") { dialog, whichButton ->
+            val credential = PhoneAuthProvider.getCredential(verificationId, "123456")
+            signIn(credential)
+        }
+        alert.show()
+    }
+
+    private fun signIn(credential: PhoneAuthCredential) {
+        mAuth.signInWithCredential(credential).addOnCompleteListener(activity!!) { task ->
+            if (task.isSuccessful) {
+                // Sign in success, update UI with the signed-in user's information
+                showSnackbar("Sign In: Success")
+            } else {
+                // Sign in failed, display a message and update the UI
+                showSnackbar("Sign In: Failure")
+                if (task.exception is FirebaseAuthInvalidCredentialsException) {
+                    // The verification code entered was invalid
+                    showSnackbar("Invalid code was entered")
+                }
+                // Sign in failed
             }
         }
     }
@@ -80,21 +112,6 @@ class PhoneNumberValidationFragment : Fragment() {
         PhoneAuthProvider.getInstance()
             .verifyPhoneNumber(phoneNumber, 60, TimeUnit.SECONDS, activity!!, callbacks)
         verificationInProgress = true
-    }
-
-    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-        mAuth.signInWithCredential(credential).addOnCompleteListener {
-            if (it.isSuccessful) {
-                showSnackbar("signInWithCredential:Success")
-            } else {
-                // Sign in failed, display a message and update the UI
-                Log.w(TAG, "signInWithCredential:Failed", it.exception)
-                if (it.exception is FirebaseAuthInvalidCredentialsException) {
-                    showSnackbar("Invalid code.")
-                }
-                showSnackbar("Sign in failed")
-            }
-        }
     }
 
     private fun showSnackbar(message: String) {

@@ -42,5 +42,5 @@ dependencies {
 
     //FireBase DB
     implementation "com.google.firebase:firebase-database:$firebaseDatabase"
-    implementation 'com.firebaseui:firebase-ui-auth:6.0.2'
+    implementation "com.firebaseui:firebase-ui-auth:$firebaseUI"
 }
