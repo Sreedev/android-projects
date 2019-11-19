@@ -10,7 +10,7 @@ android {
     buildToolsVersion buildToolsVer
     defaultConfig {
         applicationId "com.sample.slothyhacker.firebaseintegrations"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion compileSDKVer
         versionCode 1
         versionName "1.0"
@@ -42,5 +42,5 @@ dependencies {
 
     //FireBase DB
     implementation "com.google.firebase:firebase-database:$firebaseDatabase"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "com.firebaseui:firebase-ui-auth:$firebaseUI"
 }
