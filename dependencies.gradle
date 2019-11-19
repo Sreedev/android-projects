@@ -24,4 +24,5 @@ ext{
     xlegacysupport = "1.0.0"
     firebaseAuth = "16.0.5"
     firebaseDatabase = "16.0.5"
+    firebaseUI = "6.0.2"
 }
