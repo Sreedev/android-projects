@@ -43,4 +43,9 @@ dependencies {
     //FireBase DB
     implementation "com.google.firebase:firebase-database:$firebaseDatabase"
     implementation "com.firebaseui:firebase-ui-auth:$firebaseUI"
+
+    //Face detection
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.google.firebase:firebase-ml-vision:20.0.0'
+    implementation 'com.google.firebase:firebase-ml-vision-face-model:17.0.2'
 }
