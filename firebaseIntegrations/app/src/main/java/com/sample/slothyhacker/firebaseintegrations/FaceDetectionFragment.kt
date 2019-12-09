@@ -29,8 +29,19 @@ class FaceDetectionFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_face_detection, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        takePicture.setOnClickListener {
+            view?.let { takePicture() }
+        }
+
+        detectFace.setOnClickListener {
+            view?.let { detectFace() }
+        }
+    }
+
     /** Callback for the take picture button */
-    fun takePicture(view: View) {
+    private fun takePicture() {
         // Take an image using an existing camera app
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
             takePictureIntent.resolveActivity(activity!!.packageManager)?.also {
@@ -42,7 +53,7 @@ class FaceDetectionFragment : Fragment() {
     }
 
     /** Callback for the detect face button */
-    fun detectFace(view: View) {
+    private fun detectFace() {
         // Build the options for face detector SDK
         if (cameraImage != null) {
             val image = FirebaseVisionImage.fromBitmap(cameraImage as Bitmap)
