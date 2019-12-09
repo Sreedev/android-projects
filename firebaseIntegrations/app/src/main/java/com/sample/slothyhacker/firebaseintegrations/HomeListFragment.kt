@@ -20,6 +20,7 @@ class HomeListFragment : Fragment(), View.OnClickListener {
         super.onResume()
         tv_email_auth.setOnClickListener(this)
         tv_phone_auth.setOnClickListener(this)
+        tv_face_detection.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -29,6 +30,9 @@ class HomeListFragment : Fragment(), View.OnClickListener {
             }
             R.id.tv_phone_auth -> {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_phoneNumberValidationFragment)
+            }
+            R.id.tv_face_detection -> {
+                v.findNavController().navigate(R.id.action_FBListFragment_to_faceDetectionFragment)
             }
         }
     }

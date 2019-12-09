@@ -22,10 +22,17 @@
         <action
             android:id="@+id/action_FBListFragment_to_phoneNumberValidationFragment"
             app:destination="@id/phoneNumberValidationFragment" />
+        <action
+            android:id="@+id/action_FBListFragment_to_faceDetectionFragment"
+            app:destination="@id/faceDetectionFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneNumberValidationFragment"
         android:name="com.sample.slothyhacker.firebaseintegrations.PhoneNumberValidationFragment"
         android:label="fragment_phone_number_validation"
         tools:layout="@layout/fragment_phone_number_validation" />
+    <fragment
+        android:id="@+id/faceDetectionFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.FaceDetectionFragment"
+        android:label="FaceDetectionFragment" />
 </navigation>
