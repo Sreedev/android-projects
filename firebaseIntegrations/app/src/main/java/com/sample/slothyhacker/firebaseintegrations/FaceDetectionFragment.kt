@@ -9,6 +9,7 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
@@ -78,9 +79,21 @@ class FaceDetectionFragment : Fragment() {
             val face = faces[0]
             val faceGraphic = FaceContourGraphic(graphicOverlay, face)
             graphicOverlay.add(faceGraphic)
-            happiness.text = "Smile Probability: " + (face.smilingProbability * 100) + "%"
+            Toast.makeText(activity,"Smile Probability: " +
+                    (face.smilingProbability * 100) + "%",Toast.LENGTH_LONG).show()
+
+     /*       Toast.makeText(activity,"Left eye open Probability: " +
+                    (face.leftEyeOpenProbability * 100) + "%",Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"Right eye open Probability: " +
+                    (face.rightEyeOpenProbability * 100) + "%",Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"Bounds of face: " +
+                    (face.boundingBox) + "%",Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"Face tilted Y: " +
+                    (face.headEulerAngleY) + "%",Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"Face tilted Z: " +
+                    (face.headEulerAngleZ) + "%",Toast.LENGTH_LONG).show()*/
         } else {
-            happiness.text = "No face detected"
+            Toast.makeText(activity,"No face detected",Toast.LENGTH_LONG).show()
         }
     }
 
