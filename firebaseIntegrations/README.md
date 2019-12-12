@@ -13,7 +13,14 @@ Firebase Email has the below feature implemented in it
 
 
 ## Firebase Database
-In the e-mail auth fragment, we are using Firebase database to store the user credentials.
+> Initiate Database and Database register object.
+> Give table name when inititaing Database register object.
+> Use the register object to insert, delete and update data.
 
 
-## Firebase Phone number auth - {Dev in progress}.
+## Firebase Phone number auth.
+> Add your phone number in the PhoneAuthFragment.
+> If in emulator, add mock phone number and OTP in Firebase console. GIve same phone number on PhoneAuthFragment.
+> Authentication will be done using that phone number.
+
+## Firebase MLKit - Face detection{Dev in progress}
