@@ -25,4 +25,10 @@ ext{
     firebaseAuth = "16.0.5"
     firebaseDatabase = "16.0.5"
     firebaseUI = "6.0.2"
+
+    firebasecore = "16.0.9"
+    firebaseMlVision = "20.0.0"
+    firebaseMlVisionFaceModel = "17.0.2"
+
+    multidex = "1.0.3"
 }

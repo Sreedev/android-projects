@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_FBListFragment_to_faceDetectionFragment"
             app:destination="@id/faceDetectionFragment" />
+        <action
+            android:id="@+id/action_FBListFragment_to_cloudStoreFragment"
+            app:destination="@id/cloudStoreFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneNumberValidationFragment"
@@ -35,4 +38,9 @@
         android:id="@+id/faceDetectionFragment"
         android:name="com.sample.slothyhacker.firebaseintegrations.FaceDetectionFragment"
         android:label="FaceDetectionFragment" />
+    <fragment
+        android:id="@+id/cloudStoreFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.CloudStoreFragment"
+        android:label="fragment_cloud_store"
+        tools:layout="@layout/fragment_cloud_store" />
 </navigation>
