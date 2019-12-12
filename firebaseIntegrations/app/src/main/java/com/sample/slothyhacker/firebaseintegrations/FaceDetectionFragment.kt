@@ -19,6 +19,9 @@ import kotlinx.android.synthetic.main.fragment_face_detection.*
 
 class FaceDetectionFragment : Fragment() {
 
+    //TODO Enable permission for Camera and Storage.
+    // Apps and Notification>Apps>"ThisApp">Enable Camera and storage
+
     private val requestImageCapture = 1
     private var cameraImage: Bitmap? = null
 
@@ -43,7 +46,7 @@ class FaceDetectionFragment : Fragment() {
 
     /** Callback for the take picture button */
     private fun takePicture() {
-        // Take an image using an existing camera app
+        // Using Camera app take a picture
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
             takePictureIntent.resolveActivity(activity!!.packageManager)?.also {
                 startActivityForResult(takePictureIntent, requestImageCapture)
@@ -55,7 +58,7 @@ class FaceDetectionFragment : Fragment() {
 
     /** Callback for the detect face button */
     private fun detectFace() {
-        // Build the options for face detector SDK
+        // Create a builder
         if (cameraImage != null) {
             val image = FirebaseVisionImage.fromBitmap(cameraImage as Bitmap)
             val builder = FirebaseVisionFaceDetectorOptions.Builder()
@@ -63,7 +66,7 @@ class FaceDetectionFragment : Fragment() {
             builder.setClassificationMode(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
             val options = builder.build()
 
-            // Send our image to be detected by the SDK
+            // Send the bitmap to the builder after building it
             val detector = FirebaseVision.getInstance().getVisionFaceDetector(options)
             detector.detectInImage(image).addOnSuccessListener { faces ->
                 displayImage(faces)
@@ -75,13 +78,16 @@ class FaceDetectionFragment : Fragment() {
     private fun displayImage(faces: List<FirebaseVisionFace>) {
         graphicOverlay.clear()
         if (faces.isNotEmpty()) {
-            // We will only draw an overlay on the first face
+            // Draw an overlay over the picture
             val face = faces[0]
             val faceGraphic = FaceContourGraphic(graphicOverlay, face)
             graphicOverlay.add(faceGraphic)
             Toast.makeText(activity,"Smile Probability: " +
                     (face.smilingProbability * 100) + "%",Toast.LENGTH_LONG).show()
 
+            /**
+             * Below commented code can give more detail about the detected face.
+             */
      /*       Toast.makeText(activity,"Left eye open Probability: " +
                     (face.leftEyeOpenProbability * 100) + "%",Toast.LENGTH_LONG).show()
             Toast.makeText(activity,"Right eye open Probability: " +
@@ -102,13 +108,12 @@ class FaceDetectionFragment : Fragment() {
         if (requestCode == requestImageCapture && resultCode == RESULT_OK && data != null && data.extras != null) {
             val imageBitmap = data!!.extras!!.get("data") as Bitmap
 
-            // Instead of creating a new file in the user's device to get a full scale image
-            // resize our smaller imageBitMap to fit the screen
+            // Resizing the image
             val width = Resources.getSystem().displayMetrics.widthPixels
             val height = width / imageBitmap.width * imageBitmap.height
             cameraImage = Bitmap.createScaledBitmap(imageBitmap, width, height, false)
 
-            // Display the image and enable our ML facial detection button
+            // Set image and button enabled for face detection
             imageView.setImageBitmap(cameraImage)
             detectFace.isEnabled = true
         }
