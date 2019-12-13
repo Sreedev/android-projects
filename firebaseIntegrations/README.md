@@ -23,4 +23,8 @@ Firebase Email has the below feature implemented in it
 > If in emulator, add mock phone number and OTP in Firebase console. GIve same phone number on PhoneAuthFragment.
 > Authentication will be done using that phone number.
 
-## Firebase MLKit - Face detection{Dev in progress}
+## Firebase MLKit - Face detection
+> Make sure you have enabled the permision for Camera and Storage before checking this functionality
+> As of now only one face is getting detected, face object can be used to get all detected faces.
+
+## Firebase Cloud store {Dev in progress}
