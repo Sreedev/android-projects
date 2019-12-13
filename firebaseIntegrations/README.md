@@ -13,18 +13,18 @@ Firebase Email has the below feature implemented in it
 
 
 ## Firebase Database
-> Initiate Database and Database register object.
-> Give table name when inititaing Database register object.
+> Initiate Database and Database register object.<br />
+> Give table name when inititaing Database register object.<br />
 > Use the register object to insert, delete and update data.
 
 
 ## Firebase Phone number auth.
-> Add your phone number in the PhoneAuthFragment.
-> If in emulator, add mock phone number and OTP in Firebase console. GIve same phone number on PhoneAuthFragment.
+> Add your phone number in the PhoneAuthFragment.<br />
+> If in emulator, add mock phone number and OTP in Firebase console. GIve same phone number on PhoneAuthFragment.<br />
 > Authentication will be done using that phone number.
 
 ## Firebase MLKit - Face detection
-> Make sure you have enabled the permision for Camera and Storage before checking this functionality
+> Make sure you have enabled the permision for Camera and Storage before checking this functionality.<br />
 > As of now only one face is getting detected, face object can be used to get all detected faces.
 
 ## Firebase Cloud store {Dev in progress}
