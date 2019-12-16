@@ -52,4 +52,6 @@ dependencies {
 
     //Multi dex support
     implementation "com.android.support:multidex:$multidex"
+    implementation 'com.google.firebase:firebase-storage:16.0.4'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
 }
