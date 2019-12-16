@@ -55,6 +55,21 @@ class FaceDetectionFragment : Fragment() {
             }
         }
     }
+    /** Receive the result from the camera app */
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == requestImageCapture && resultCode == RESULT_OK && data != null && data.extras != null) {
+            val imageBitmap = data!!.extras!!.get("data") as Bitmap
+
+            // Resizing the image
+            val width = Resources.getSystem().displayMetrics.widthPixels
+            val height = width / imageBitmap.width * imageBitmap.height
+            cameraImage = Bitmap.createScaledBitmap(imageBitmap, width, height, false)
+
+            // Set image and button enabled for face detection
+            imageView.setImageBitmap(cameraImage)
+            detectFace.isEnabled = true
+        }
+    }
 
     /** Callback for the detect face button */
     private fun detectFace() {
@@ -102,21 +117,4 @@ class FaceDetectionFragment : Fragment() {
             Toast.makeText(activity,"No face detected",Toast.LENGTH_LONG).show()
         }
     }
-
-    /** Receive the result from the camera app */
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == requestImageCapture && resultCode == RESULT_OK && data != null && data.extras != null) {
-            val imageBitmap = data!!.extras!!.get("data") as Bitmap
-
-            // Resizing the image
-            val width = Resources.getSystem().displayMetrics.widthPixels
-            val height = width / imageBitmap.width * imageBitmap.height
-            cameraImage = Bitmap.createScaledBitmap(imageBitmap, width, height, false)
-
-            // Set image and button enabled for face detection
-            imageView.setImageBitmap(cameraImage)
-            detectFace.isEnabled = true
-        }
-    }
-
 }
