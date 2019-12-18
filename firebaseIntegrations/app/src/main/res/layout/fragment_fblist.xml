@@ -44,7 +44,7 @@
                 android:textSize="16sp"
                 android:background="#F9D77E"
                 android:padding="20dp"
-                android:text="Cloud store"/>
+                android:text="Cloud storage"/>
             <TextView
                 android:id="@+id/tv_face_detection"
                 android:layout_width="match_parent"
