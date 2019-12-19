@@ -28,9 +28,9 @@ Firebase Email has the below feature implemented in it
 > As of now only one face is getting detected, face object can be used to get all detected faces.
 
 ## Firebase Cloud store
-> Select a photo from gallery.
-> Upload the photo 
-> Download the photo
+> Select a photo from gallery.<br />
+> Upload the photo.<br />
+> Download the photo.<br />
 > Storage of that file happens in Firebase cloud storage.
 
 ## Text recognition{Dev in progress} 
