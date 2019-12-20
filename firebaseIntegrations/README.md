@@ -4,7 +4,6 @@ Please not before using the project you have to set up all the firebase services
 in yout firebase console. After that only you can use the below code.
 
 ## Firebase Email auth
-Firebase Email has the below feature implemented in it
 > User already registered or not check.<br />
 > User registration.<br />
 > User email verification.<br />
