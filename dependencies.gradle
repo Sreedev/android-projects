@@ -29,6 +29,9 @@ ext{
     firebasecore = "16.0.9"
     firebaseMlVision = "20.0.0"
     firebaseMlVisionFaceModel = "17.0.2"
-
+    
+    firebaseStorage = '17.0.0'
+    Glide = '4.2.0'
+    
     multidex = "1.0.3"
 }

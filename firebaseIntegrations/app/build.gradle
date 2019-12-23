@@ -52,6 +52,6 @@ dependencies {
 
     //Multi dex support
     implementation "com.android.support:multidex:$multidex"
-    implementation 'com.google.firebase:firebase-storage:17.0.0'
-    implementation 'com.github.bumptech.glide:glide:4.2.0'
+    implementation "com.google.firebase:firebase-storage:$firebaseStorage"
+    implementation "com.github.bumptech.glide:glide:$Glide"
 }
