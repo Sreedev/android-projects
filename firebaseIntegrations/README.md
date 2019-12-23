@@ -4,7 +4,6 @@ Please not before using the project you have to set up all the firebase services
 in yout firebase console. After that only you can use the below code.
 
 ## Firebase Email auth
-Firebase Email has the below feature implemented in it
 > User already registered or not check.<br />
 > User registration.<br />
 > User email verification.<br />
@@ -27,4 +26,11 @@ Firebase Email has the below feature implemented in it
 > Make sure you have enabled the permision for Camera and Storage before checking this functionality.<br />
 > As of now only one face is getting detected, face object can be used to get all detected faces.
 
-## Firebase Cloud store {Dev in progress}
+## Firebase Cloud store
+> Select a photo from gallery.<br />
+> Upload the photo.<br />
+> Download the photo.<br />
+> Storage of that file happens in Firebase cloud storage.
+
+## Text recognition{Dev in progress} 
+
