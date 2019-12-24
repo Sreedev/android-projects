@@ -4,7 +4,7 @@ This is a repo which intent to keep maximum sample Android projects done in both
 
 # "All in one place" - Android sample projects
 
-### Star this repo, contribute and make this a happy place :). Lets grow together. 💚
+### Star this repo, contribute and keep this a happy place :). Lets grow together. 💚
 
 ## Samples
 1. [Dagger2](https://github.com/Sreedev/SampleApplications/tree/develop/Dagger2Sample)
@@ -26,7 +26,7 @@ This is a repo which intent to keep maximum sample Android projects done in both
 > 1. Make your branch from develop and changes should made in that feature or bugfix. 
 > 1. Pull requests should only be raised against develop branch.
 > 2. Approval from one of the owners is mandatory to merge it to develop.
-> 3. [feature or bugfix]/[name of change] should be PR title format.
+> 3. [feature or bugfix]/[Description] should be PR title format.
 > 4. Adding a short desc in the PR will be really helpful.
 > 5. Make sure your branch is ahead of develop branch before merging it.
 
