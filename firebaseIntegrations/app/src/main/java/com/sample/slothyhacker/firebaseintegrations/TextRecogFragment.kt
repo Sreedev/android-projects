@@ -39,9 +39,7 @@ class TextRecogFragment : Fragment() {
             view?.let { runTextRecognition()}
         }
     }
-
-
-    /** Callback for the take picture button */
+    
     private fun takePicture() {
         // Using Camera app take a picture
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
