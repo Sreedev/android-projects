@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_FBListFragment_to_cloudStoreFragment"
             app:destination="@id/cloudStoreFragment" />
+        <action
+            android:id="@+id/action_FBListFragment_to_textRecogFragment"
+            app:destination="@id/textRecogFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneNumberValidationFragment"
@@ -43,4 +46,9 @@
         android:name="com.sample.slothyhacker.firebaseintegrations.CloudStoreFragment"
         android:label="fragment_cloud_store"
         tools:layout="@layout/fragment_cloud_store" />
+    <fragment
+        android:id="@+id/textRecogFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.TextRecogFragment"
+        android:label="fragment_text_recog"
+        tools:layout="@layout/fragment_text_recog" />
 </navigation>

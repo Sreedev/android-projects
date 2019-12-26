@@ -22,6 +22,7 @@ class HomeListFragment : Fragment(), View.OnClickListener {
         tv_phone_auth.setOnClickListener(this)
         tv_cloud_store.setOnClickListener(this)
         tv_face_detection.setOnClickListener(this)
+        tv_text_recognition.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -37,6 +38,9 @@ class HomeListFragment : Fragment(), View.OnClickListener {
             }
             R.id.tv_face_detection -> {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_faceDetectionFragment)
+            }
+            R.id.tv_text_recognition -> {
+                v.findNavController().navigate(R.id.action_FBListFragment_to_textRecogFragment)
             }
         }
     }
