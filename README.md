@@ -35,6 +35,9 @@ This is a repo which intent to keep maximum sample Android projects done in both
 [![Twitter Follow](https://img.shields.io/twitter/follow/sreedevr5?label=sreedev&style=social)](https://twitter.com/Sreedevr5)<br />
 Feel free to DM me in twitter for any queries.
 
+## Inspired from
+[nisrulz](https://github.com/nisrulz) - [Android samples](https://github.com/nisrulz/android-examples)<br />
+
 License
 =======
 
