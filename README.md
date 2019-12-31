@@ -30,13 +30,14 @@ This is a repo which intent to keep maximum sample Android projects done in both
 > 4. Adding a short desc in the PR will be really helpful.
 > 5. Make sure your branch is ahead of develop branch before merging it.
 
+## Inspired from
+[Nishant Srivastava](https://github.com/nisrulz) - [Android samples](https://github.com/nisrulz/android-examples)<br />
+
 ## Created & Maintained By
 [Sreedev](http://www.thelifeimprovised.com/)<br />
 [![Twitter Follow](https://img.shields.io/twitter/follow/sreedevr5?label=sreedev&style=social)](https://twitter.com/Sreedevr5)<br />
 Feel free to DM me in twitter for any queries.
 
-## Inspired from
-[Nishant Srivastava](https://github.com/nisrulz) - [Android samples](https://github.com/nisrulz/android-examples)<br />
 
 License
 =======
