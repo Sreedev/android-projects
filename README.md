@@ -36,7 +36,7 @@ This is a repo which intent to keep maximum sample Android projects done in both
 Feel free to DM me in twitter for any queries.
 
 ## Inspired from
-[nisrulz](https://github.com/nisrulz) - [Android samples](https://github.com/nisrulz/android-examples)<br />
+[Nishant Srivastava](https://github.com/nisrulz) - [Android samples](https://github.com/nisrulz/android-examples)<br />
 
 License
 =======
