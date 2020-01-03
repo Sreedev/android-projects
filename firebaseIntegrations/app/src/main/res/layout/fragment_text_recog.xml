@@ -58,6 +58,6 @@
         android:layout_marginRight="61dp"
         android:layout_marginBottom="16dp"
         android:enabled="false"
-        android:text="Detect Face"
+        android:text="Scan text"
         android:visibility="visible" />
 </RelativeLayout>
