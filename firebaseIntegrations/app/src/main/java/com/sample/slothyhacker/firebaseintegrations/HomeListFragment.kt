@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_fblist.*
@@ -12,7 +11,11 @@ import kotlinx.android.synthetic.main.fragment_fblist.*
 class HomeListFragment : Fragment(), View.OnClickListener {
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_fblist, container, false)
     }
 
@@ -23,6 +26,7 @@ class HomeListFragment : Fragment(), View.OnClickListener {
         tv_cloud_store.setOnClickListener(this)
         tv_face_detection.setOnClickListener(this)
         tv_text_recognition.setOnClickListener(this)
+        tv_object_tracking.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -31,7 +35,8 @@ class HomeListFragment : Fragment(), View.OnClickListener {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_emailAuthFragment)
             }
             R.id.tv_phone_auth -> {
-                v.findNavController().navigate(R.id.action_FBListFragment_to_phoneNumberValidationFragment)
+                v.findNavController()
+                    .navigate(R.id.action_FBListFragment_to_phoneNumberValidationFragment)
             }
             R.id.tv_cloud_store -> {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_cloudStoreFragment)
@@ -41,6 +46,8 @@ class HomeListFragment : Fragment(), View.OnClickListener {
             }
             R.id.tv_text_recognition -> {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_textRecogFragment)
+            }
+            R.id.tv_object_tracking -> {
             }
         }
     }
