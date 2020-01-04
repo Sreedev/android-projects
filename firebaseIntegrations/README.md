@@ -11,7 +11,7 @@ in yout firebase console. After that only you can use the below code.
 > User login.
 
 
-## Firebase Database
+## [Firebase Database](https://medium.com/@sreedev.r5/firebase-phone-number-authentication-taking-one-step-closer-to-know-users-54aa6a2bc489)
 > Initiate Database and Database register object.<br />
 > Give table name when inititaing Database register object.<br />
 > Use the register object to insert, delete and update data.
