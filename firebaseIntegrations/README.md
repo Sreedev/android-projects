@@ -32,5 +32,8 @@ in yout firebase console. After that only you can use the below code.
 > Download the photo.<br />
 > Storage of that file happens in Firebase cloud storage.
 
-## Text recognition{Dev in progress} 
+## Text recognition
+> Make sure you have enabled the permision for Camera and Storage before checking this functionality.<br />
+> take the pic and click on the scan text button, ML Kit will return the detected text.
 
+## Object detection{Dev in progress}
