@@ -35,8 +35,7 @@ class HomeListFragment : Fragment(), View.OnClickListener {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_emailAuthFragment)
             }
             R.id.tv_phone_auth -> {
-                v.findNavController()
-                    .navigate(R.id.action_FBListFragment_to_phoneNumberValidationFragment)
+                v.findNavController().navigate(R.id.action_FBListFragment_to_phoneNumberValidationFragment)
             }
             R.id.tv_cloud_store -> {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_cloudStoreFragment)
@@ -48,6 +47,7 @@ class HomeListFragment : Fragment(), View.OnClickListener {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_textRecogFragment)
             }
             R.id.tv_object_tracking -> {
+                v.findNavController().navigate(R.id.action_FBListFragment_to_objectTrackingFragment)
             }
         }
     }

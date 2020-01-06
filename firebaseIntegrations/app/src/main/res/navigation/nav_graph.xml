@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_FBListFragment_to_textRecogFragment"
             app:destination="@id/textRecogFragment" />
+        <action
+            android:id="@+id/action_FBListFragment_to_objectTrackingFragment"
+            app:destination="@id/objectTrackingFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneNumberValidationFragment"
@@ -51,4 +54,10 @@
         android:name="com.sample.slothyhacker.firebaseintegrations.TextRecogFragment"
         android:label="fragment_text_recog"
         tools:layout="@layout/fragment_text_recog" />
+    <fragment
+        android:id="@+id/objectTrackingFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.ObjectTrackingFragment"
+        android:label="fragment_object_tracking"
+        tools:layout="@layout/fragment_object_tracking" >
+    </fragment>
 </navigation>
