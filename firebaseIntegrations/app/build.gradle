@@ -37,22 +37,31 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
+    //Multi dex support
+    implementation "com.android.support:multidex:$multidex"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$Glide"
+
     //FireBase
     implementation "androidx.legacy:legacy-support-v4:$xlegacysupport"
+    implementation "com.google.firebase:firebase-core:$firebasecore"
+    implementation "com.google.firebase:firebase-ml-vision:$firebaseMlVision"
+
+    //Firebase Auth
     implementation "com.google.firebase:firebase-auth:$firebaseAuth"
 
     //FireBase DB
     implementation "com.google.firebase:firebase-database:$firebaseDatabase"
     implementation "com.firebaseui:firebase-ui-auth:$firebaseUI"
 
-    //Face detection
-    implementation "com.google.firebase:firebase-core:$firebasecore"
-    implementation "com.google.firebase:firebase-ml-vision:$firebaseMlVision"
+    //FireBase Storage
+    implementation "com.google.firebase:firebase-storage:$firebaseStorage"
+
+    //FireBase Face detection
     implementation "com.google.firebase:firebase-ml-vision-face-model:$firebaseMlVisionFaceModel"
 
-    //Multi dex support
-    implementation "com.android.support:multidex:$multidex"
-    implementation "com.google.firebase:firebase-storage:$firebaseStorage"
-    implementation "com.github.bumptech.glide:glide:$Glide"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //FireBase Object detection and labeling
+    implementation 'com.google.firebase:firebase-ml-vision-object-detection-model:16.0.0'
+    implementation 'com.google.firebase:firebase-ml-vision-image-label-model:17.0.2'
 }
