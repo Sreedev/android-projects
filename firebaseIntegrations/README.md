@@ -34,6 +34,11 @@ in yout firebase console. After that only you can use the below code.
 
 ## Text recognition
 > Make sure you have enabled the permision for Camera and Storage before checking this functionality.<br />
-> take the pic and click on the scan text button, ML Kit will return the detected text.
+> Take the pic and click on the scan text button, ML Kit will return the detected text.
 
-## Object detection{Dev in progress}
+## Object detection - On device
+> Make sure you have enabled the permision for Camera and Storage before checking this functionality.<br />
+> Take the pic and click on the ODD button, ML Kit will classify the the object and print it in the console.<br />
+> On device classifications are very limited, there are only few categories.
+
+## Object detection - On cloud{Dev in progress}
