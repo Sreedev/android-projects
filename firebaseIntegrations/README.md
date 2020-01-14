@@ -41,4 +41,7 @@ in yout firebase console. After that only you can use the below code.
 > Take the pic and click on the ODD button, ML Kit will classify the the object and print it in the console.<br />
 > On device classifications are very limited, there are only few categories.
 
-## Object detection - On cloud{Dev in progress}
+## Object detection - On cloud
+> make a blaze accout to check this functionality
+
+## Translation - On device{Dev in progress}
