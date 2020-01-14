@@ -95,6 +95,7 @@ class ObjectTrackingFragment : Fragment() {
                     val box = obj.boundingBox
                     Log.d(LOG_MOD, "Detected object: ${idx} ")
                     when (obj.classificationCategory) {
+                        //Firebase only supports this much categories
                         0 -> Log.d(LOG_MOD, "  Classification name: CATEGORY_UNKNOWN")
                         1 -> Log.d(LOG_MOD, "  Classification name: CATEGORY_HOME_GOOD")
                         2 -> Log.d(LOG_MOD, "  Classification name: CATEGORY_FASHION_GOOD")

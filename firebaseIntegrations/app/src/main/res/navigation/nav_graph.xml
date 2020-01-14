@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_FBListFragment_to_objectTrackingFragment"
             app:destination="@id/objectTrackingFragment" />
+        <action
+            android:id="@+id/action_FBListFragment_to_textTranslateFragment"
+            app:destination="@id/textTranslateFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneNumberValidationFragment"
@@ -60,4 +63,9 @@
         android:label="fragment_object_tracking"
         tools:layout="@layout/fragment_object_tracking" >
     </fragment>
+    <fragment
+        android:id="@+id/textTranslateFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.TextTranslateFragment"
+        android:label="fragment_text_translate"
+        tools:layout="@layout/fragment_text_translate" />
 </navigation>
