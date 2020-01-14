@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion compileSDKVer
+    buildToolsVersion buildToolsVer
+    defaultConfig {
+        applicationId "com.outofbound.mviarchitecture"
+        minSdkVersion minSdkVer
+        targetSdkVersion compileSDKVer
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "androidx.appcompat:appcompat:$appCompact"
+    implementation "androidx.core:core-ktx:$coreKtx"
+    implementation "androidx.constraintlayout:constraintlayout:$contraintLayout"
+}
