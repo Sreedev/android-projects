@@ -42,6 +42,6 @@ in yout firebase console. After that only you can use the below code.
 > On device classifications are very limited, there are only few categories.
 
 ## Object detection - On cloud
-> make a blaze accout to check this functionality
+> Make a blaze accout to check this functionality
 
 ## Translation - On device{Dev in progress}
