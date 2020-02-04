@@ -11,6 +11,7 @@ This is a repo which intent to keep maximum sample Android projects done in both
 2. [MVVP with Dagger and Rxjava](https://github.com/Sreedev/SampleApplications/tree/develop/MVVPwithDaggerRxJSample)
 3. [recyclerviewwithkotlin](https://github.com/Sreedev/androidappsamples/tree/develop/recyclerviewwithkotlin)
 4. [FirebaseIntegrations](https://github.com/Sreedev/androidappsamples/tree/develop/firebaseIntegrations)
+5. [MVI architecture](https://github.com/Sreedev/androidappsamples/tree/develop/MVIArchitecture)
 
 ## Setup.
 > 1. Create a new folder.
