@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/textTranslateFragment"
-        android:name="com.sample.slothyhacker.firebaseintegrations.TextTranslateFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.LandMarkRecognitionFragment"
         android:label="fragment_text_translate"
-        tools:layout="@layout/fragment_text_translate" />
+        tools:layout="@layout/fragment_landmark_recognitionxml" />
 </navigation>

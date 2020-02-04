@@ -76,7 +76,7 @@
                 android:padding="20dp"
                 android:text="MLKit: Object detection"/>
             <TextView
-                android:id="@+id/tv_translate"
+                android:id="@+id/tv_landmark_recognition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -84,7 +84,7 @@
                 android:textSize="16sp"
                 android:background="#F9D77E"
                 android:padding="20dp"
-                android:text="MLKit: Text translate"/>
+                android:text="MLKit: Landmark recognition"/>
         </LinearLayout>
     </ScrollView>
 

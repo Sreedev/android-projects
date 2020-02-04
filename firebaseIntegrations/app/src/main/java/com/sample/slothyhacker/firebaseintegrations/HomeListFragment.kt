@@ -49,7 +49,7 @@ class HomeListFragment : Fragment(), View.OnClickListener {
             R.id.tv_object_tracking -> {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_objectTrackingFragment)
             }
-            R.id.tv_translate -> {
+            R.id.tv_landmark_recognition -> {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_textTranslateFragment)
             }
         }
