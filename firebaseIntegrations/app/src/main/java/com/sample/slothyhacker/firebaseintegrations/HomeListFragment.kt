@@ -27,6 +27,7 @@ class HomeListFragment : Fragment(), View.OnClickListener {
         tv_face_detection.setOnClickListener(this)
         tv_text_recognition.setOnClickListener(this)
         tv_object_tracking.setOnClickListener(this)
+        tv_landmark_recognition.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
