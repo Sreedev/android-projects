@@ -44,4 +44,7 @@ in yout firebase console. After that only you can use the below code.
 ## Object detection - On cloud
 > Make a blaze accout to check this functionality
 
+## Landmark recoginition - On cloud
+> Need a cloud account and can retrieve the place name and its confidence.
+
 ## Translation - On device{Dev in progress}
