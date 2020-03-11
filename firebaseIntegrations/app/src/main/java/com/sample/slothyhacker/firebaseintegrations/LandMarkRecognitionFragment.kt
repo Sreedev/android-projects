@@ -89,8 +89,7 @@ class LandMarkRecognitionFragment : Fragment() {
                         val latitude = loc.latitude
                         val longitude = loc.longitude
                     }
-
-                    println("$landmarkName - $confidence %")
+                    tv_landmark.text = "$landmarkName - $confidence %"
                 }
             }
             .addOnFailureListener { e ->
