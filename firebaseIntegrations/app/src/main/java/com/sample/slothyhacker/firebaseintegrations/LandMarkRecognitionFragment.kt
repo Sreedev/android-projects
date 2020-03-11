@@ -71,24 +71,12 @@ class LandMarkRecognitionFragment : Fragment() {
         val image = FirebaseVisionImage.fromBitmap(cameraImage)
         val detector = FirebaseVision.getInstance()
             .visionCloudLandmarkDetector
-            // Or, to change the default settings:
-            // val detector = FirebaseVision.getInstance()
-            //         .getVisionCloudLandmarkDetector(options)
-        val result = detector.detectInImage(image)
+        detector.detectInImage(image)
             .addOnSuccessListener { firebaseVisionCloudLandmarks ->
                 for (landmark in firebaseVisionCloudLandmarks) {
-
-                    val bounds = landmark.boundingBox
                     val landmarkName = landmark.landmark
-                    val entityId = landmark.entityId
                     val confidence = landmark.confidence
 
-                    // Multiple locations are possible, e.g., the location of the depicted
-                    // landmark and the location the picture was taken.
-                    for (loc in landmark.locations) {
-                        val latitude = loc.latitude
-                        val longitude = loc.longitude
-                    }
                     tv_landmark.text = "$landmarkName - $confidence %"
                 }
             }
