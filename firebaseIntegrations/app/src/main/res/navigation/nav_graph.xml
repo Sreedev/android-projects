@@ -35,8 +35,11 @@
             android:id="@+id/action_FBListFragment_to_objectTrackingFragment"
             app:destination="@id/objectTrackingFragment" />
         <action
-            android:id="@+id/action_FBListFragment_to_textTranslateFragment"
-            app:destination="@id/textTranslateFragment" />
+            android:id="@+id/action_FBListFragment_to_textlandmarkRecogFragment"
+            app:destination="@id/textlandmarkRecogFragment" />
+        <action
+            android:id="@+id/action_FBListFragment_to_translateFragment"
+            app:destination="@id/translateFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneNumberValidationFragment"
@@ -64,8 +67,13 @@
         tools:layout="@layout/fragment_object_tracking" >
     </fragment>
     <fragment
-        android:id="@+id/textTranslateFragment"
+        android:id="@+id/textlandmarkRecogFragment"
         android:name="com.sample.slothyhacker.firebaseintegrations.LandMarkRecognitionFragment"
         android:label="fragment_text_translate"
-        tools:layout="@layout/fragment_landmark_recognitionxml" />
+        tools:layout="@layout/fragment_landmark_recognition" />
+    <fragment
+        android:id="@+id/translateFragment"
+        android:name="com.sample.slothyhacker.firebaseintegrations.TranslationFragment"
+        android:label="fragment_text_translate"
+        tools:layout="@layout/fragment_landmark_recognition" />
 </navigation>

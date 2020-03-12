@@ -28,6 +28,7 @@ class HomeListFragment : Fragment(), View.OnClickListener {
         tv_text_recognition.setOnClickListener(this)
         tv_object_tracking.setOnClickListener(this)
         tv_landmark_recognition.setOnClickListener(this)
+        tv_translation.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -51,7 +52,10 @@ class HomeListFragment : Fragment(), View.OnClickListener {
                 v.findNavController().navigate(R.id.action_FBListFragment_to_objectTrackingFragment)
             }
             R.id.tv_landmark_recognition -> {
-                v.findNavController().navigate(R.id.action_FBListFragment_to_textTranslateFragment)
+                v.findNavController().navigate(R.id.action_FBListFragment_to_textlandmarkRecogFragment)
+            }
+            R.id.tv_translation -> {
+                v.findNavController().navigate(R.id.action_FBListFragment_to_translateFragment)
             }
         }
     }
