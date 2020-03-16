@@ -34,4 +34,14 @@ ext{
     Glide = '4.2.0'
     
     multidex = "1.0.3"
+
+    objectDetection = "16.0.0"
+    imageLabelling = "17.0.2"
+
+    naturalLanguage = "19.0.0"
+    naturalLanguageIDModel = "19.0.0"
+    naturalLanguageTranslateModel = "19.0.0"
+
+    legacySupport = "1.0.0"
+
 }
