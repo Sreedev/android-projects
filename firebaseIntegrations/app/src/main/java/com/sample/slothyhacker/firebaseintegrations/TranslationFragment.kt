@@ -12,6 +12,7 @@ import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslateLanguag
 import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslator
 import com.google.firebase.ml.naturallanguage.translate.FirebaseTranslatorOptions
 import kotlinx.android.synthetic.main.fragment_translation.*
+import java.util.*
 
 
 class TranslationFragment : Fragment() {
@@ -31,7 +32,7 @@ class TranslationFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         rb_german.isChecked = true
-        progressbar.visibility = View.VISIBLE
+        progressbar.visibility = View.GONE
 
         if (!isHindiModelDownloaded) {
             createEnglishHindiTranslator()
@@ -67,6 +68,37 @@ class TranslationFragment : Fragment() {
                 translateToReqLang(et_text_to_translate.text, englishGermanTranslator)
             }
         }
+
+        button_detect_language.setOnClickListener {
+            view?.let {
+                detectLanguage(et_text_to_translate.text)
+            }
+        }
+    }
+
+    private fun detectLanguage(InputText: Editable?) {
+        val languageIdentifier = FirebaseNaturalLanguage.getInstance()
+            .languageIdentification
+
+        /**
+         * If you want to pass the Confidence threshold of the your language add the below code
+
+        val options = FirebaseLanguageIdentificationOptions.Builder()
+        .setConfidenceThreshold(0.2F)
+        .build()
+        val languageIdentifier = FirebaseNaturalLanguage.getInstance()
+        .getLanguageIdentification(options)
+         */
+
+        languageIdentifier.identifyLanguage(InputText.toString())
+            .addOnSuccessListener {
+                Toast.makeText(activity, Locale(it).displayLanguage, Toast.LENGTH_SHORT)
+                    .show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(activity, "Language identification failed!!", Toast.LENGTH_SHORT)
+                    .show()
+            }
     }
 
     private fun createEnglishGermanTranslator() {
