@@ -1,9 +1,13 @@
 package com.sample.slothyhacker.firebaseintegrations
 
+import android.Manifest
 import android.app.Activity
+import android.app.Activity.RESULT_CANCELED
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.graphics.Bitmap
+import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
@@ -36,23 +40,29 @@ class ObjectTrackingFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         takePicture.setOnClickListener {
-            view?.let { takePictureForObjects() }
+            view?.let { takePictureForCamera() }
         }
 
-        find_objects.setOnClickListener {
+        select_from_gallery.setOnClickListener {
             view?.let {
-                runOnDeviceObjectDetection()
+                takePictureForGallery()
             }
         }
 
-        find_objects_name.setOnClickListener {
+        start_obj_detection.setOnClickListener {
+            view?.let {
+                runOnCloudObjectDetection()
+            }
+        }
+
+        start_labelling.setOnClickListener {
             view?.let {
                 runOnCloudObjectDetection()
             }
         }
     }
 
-    private fun takePictureForObjects() {
+    private fun takePictureForCamera() {
         // Using Camera app take a picture
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
             takePictureIntent.resolveActivity(activity!!.packageManager)?.also {
@@ -61,11 +71,44 @@ class ObjectTrackingFragment : Fragment() {
         }
     }
 
+    private fun takePictureForGallery() {
+        //check runtime permission
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (context?.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+                //permission denied
+                val permissions = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
+                //show popup to request runtime permission
+                requestPermissions(permissions, PERMISSION_CODE)
+            } else {
+                //permission already granted
+                pickImageFromGallery()
+            }
+        } else {
+            //system OS is < Marshmallow
+            pickImageFromGallery()
+        }
+    }
+
+    private fun pickImageFromGallery() {
+        //Intent to pick image
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        startActivityForResult(intent, IMAGE_PICK_CODE)
+    }
+
+    companion object {
+        //image pick code
+        private const val IMAGE_PICK_CODE = 1000
+        //Permission code
+        private const val PERMISSION_CODE = 1001
+    }
+
 
     /** Receive the result from the camera app */
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == requestImageCapture && resultCode == Activity.RESULT_OK && data != null && data.extras != null) {
-            val imageBitmap = data!!.extras!!.get("data") as Bitmap
+    override fun onActivityResult(requestCode: Int, resultCode: Int, sdata: Intent?) {
+
+        if (requestCode == requestImageCapture && resultCode == Activity.RESULT_OK && sdata != null && sdata.extras != null) {
+            val imageBitmap = sdata!!.extras!!.get("data") as Bitmap
 
             // Resizing the image
             val width = Resources.getSystem().displayMetrics.widthPixels
@@ -75,7 +118,35 @@ class ObjectTrackingFragment : Fragment() {
             // Set image and button enabled for face detection
             image_view.setImageBitmap(cameraImage)
         }
+
+        if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE) {
+            if(resultCode != RESULT_CANCELED) {
+                image_view.setImageURI(sdata?.data)
+                cameraImage = MediaStore.Images.Media.getBitmap(context?.contentResolver, sdata?.data)
+            }
+        }
     }
+
+
+    //handle requested permission result
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        when (requestCode) {
+            PERMISSION_CODE -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //permission from popup granted
+                    pickImageFromGallery()
+                } else {
+                    //permission from popup denied
+                    Toast.makeText(context, "Permission denied", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
 
     private fun runOnDeviceObjectDetection() {
         val image = FirebaseVisionImage.fromBitmap(cameraImage)
@@ -125,6 +196,7 @@ class ObjectTrackingFragment : Fragment() {
 
     private fun runOnCloudObjectDetection() {
         val LOG_COD = "MLKit-OCD"
+        var results = ""
         val image = FirebaseVisionImage.fromBitmap(cameraImage)
         val detector = FirebaseVision.getInstance().cloudImageLabeler
         detector.processImage(image)
@@ -134,7 +206,10 @@ class ObjectTrackingFragment : Fragment() {
                     Log.d(LOG_COD, "Name: ${obj.text}")
                     Log.d(LOG_COD, "Confidence: ${obj.confidence}")
                     Log.d(LOG_COD, "EntityId: ${obj.entityId}")
+
+                    results = results+idx+". ${obj.text}"+ "-->Confidence: ${obj.confidence*100}%"+"\n"
                 }
+                tv_result.text = results
             }
             .addOnFailureListener { e ->
                 // Task failed with an exception
