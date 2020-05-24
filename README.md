@@ -27,7 +27,7 @@ This is a repo which intent to keep maximum sample Android projects done in both
 > 1. Make your branch from develop and changes should made in that feature or bugfix. 
 > 1. Pull requests should only be raised against develop branch.
 > 2. Approval from one of the owners is mandatory to merge it to develop.
-> 3. [feature or bugfix]/[Description] should be PR title format.
+> 3. [feature or bugfix]/[Description] should be the format of PR title.
 > 4. Adding a short desc in the PR will be really helpful.
 > 5. Make sure your branch is ahead of develop branch before merging it.
 
